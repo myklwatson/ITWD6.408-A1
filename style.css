@@ -1,0 +1,371 @@
+/* -- Flip Boxes -- */
+
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 220px;      /* short, compact box for mobile/tablet */
+  perspective: 1000px;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .flip-box {
+    width: 31%;
+    height: auto;
+    aspect-ratio: 3 / 2;   /* only enforced on large devices */
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none !important;
+}
+
+.flip-box-front {
+  background-color: #c8f0ff;
+  color: rgb(56, 34, 255);
+  font: bold 1.5rem "bradley hand", cursive;
+  display: flex;
+  overflow: hidden;
+
+  img {
+    overflow: visible;
+    padding: 10px;
+    width: 35%;
+    height: auto;
+    max-width: 150px;
+  }
+}
+
+.flip-box-front img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.showcase-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  background-image: url("Images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+}
+body{
+font-family:'century gothic', 'helvetica neue', helvetica, arial, sans-serif;
+font-weight: 500;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--bs-warning);
+  color: #000; /* warning is a light/yellow color, so dark text reads better */
+  font-weight: bold;
+}
+
+.accordion-button {
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: var(--bs-warning);
+}
+
+.form-embed {
+    width: 100%;
+    height: 2010px;
+    border: 0;
+  }
+
+  @media (max-width: 768px) {
+    .form-embed {
+      height: 3200px; /* increase until no clipping/scroll on your actual form */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-embed {
+      height: 3800px;
+    }
+  }
+
+
+/* --- Shared card styling for all demos --- */
+.demo-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* --- Demo 1: More/Less --- */
+#manual-slide-description.truncated {
+    display: none;
+}
+
+#manual-slide-description {
+    transition: opacity 0.2s ease;
+}
+
+#manual-slide-description.truncated {
+    display: none;
+}
+
+/* --- Demo 1: Slide fade transition --- */
+#manual-slide-image,
+#auto-slide-image {
+    transition: opacity 0.25s ease;
+}
+
+.fading {
+    opacity: 0;
+}
+
+/* --- Demo 1: Auto slideshow progress dots --- */
+#auto-slide-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+#auto-slide-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.2s ease;
+}
+
+#auto-slide-dots .dot.active {
+    background: #333;
+}
+
+/* --- Demo 1: Page Customisation --- */
+#customisation-card {
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+#customisation-card.dark-mode {
+    background-color: #121212 !important;
+    color: #f5f5f5;
+}
+
+#customisation-card, #customisation-card *:not(button) {
+    font-size: inherit;
+}
+
+#customisation-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#manual-slide-image {
+    width: 300px;
+    max-width: 100%; /* prevents overflow on small screens */
+}
+
+#auto-slide-image {
+    width: 300px;
+    max-width: 100%; /* prevents overflow on small screens */
+}
+
+
+/* --- Demo 2: Product Grid & Cart --- */
+
+#cartCountBadge {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+}
+
+#cartCountBadge i {
+    margin-right: 4px;
+}
+
+#productGrid img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#productGrid .product-image-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box; /* ensures padding doesn't push the box past 200px height */
+}
+
+#productGrid .product-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* --- Demo 3: Quiz --- */
+.question-block {
+    transition: opacity 0.3s ease;
+}
+
+.question-block.locked {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.quiz-option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    margin-bottom: 8px;
+}
+
+.quiz-option-btn:hover {
+    background: #f0f0f0;
+}
+
+.quiz-option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.quiz-option-btn.incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+#reset-quiz-attempt-btn {
+    padding: 10px 20px;
+    font-size: 1.05rem;
+}
+
+
+/* --- Demo 4: Authorisation --- */
+
+#auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+
+/* --- Research Page --- */
+
+
+.research-flip-box {
+    perspective: 1000px;
+    height: 300px;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .research-flip-box {
+        height: 280px;
+    }
+}
+
+.research-flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.research-flip-box:hover .research-flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.research-flip-box-front,
+.research-flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid orange;
+}
+
+.research-flip-box-front {
+    background-color: #fff4cd;
+    overflow: hidden;
+}
+
+.research-flip-box-front img {
+    width: 100%;
+    height: 65%;
+    object-fit: contain;
+    background-color: #fff4cd;
+}
+
+.research-flip-box-front h5 {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.research-flip-box-back {
+    background-color: #f8f9fa;
+    transform: rotateY(180deg);
+    padding: 14px;
+    overflow-y: auto;
+   
+    
+}
+
+.research-flip-box-back h5 {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.research-flip-box-back ol {
+    padding-left: 1rem;
+    margin-bottom: 6px;
+}
+
+.research-flip-box-back li {
+    margin-bottom: 2px;
+}
