@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Website Configuration-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBAPI</title>
+
+    <!--Insert/Embed Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Colour Variables*/
+        :root {
+            --navbar-color: #DAF7A6;
+            --showcase-color: #000000;
+            --bio-color: #FFC300;
+            --webtech-color: #EC7063;
+            --competence-color: #9CDA0D;
+            --statement-color: #F27A09;
+            --json-color: #F8F8F8;
+        }
+    </style>
+</head>
+
+<!--Visible Webpage-->
+<body>
+
+   <!--Search Functionality Field-->
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <form class="d-flex" role="search" onsubmit="return false;">
+                <input class="form-control me-2" type="search" id="siteSearchInput" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div id="siteSearchResults" class="mt-2"></div>
+        </div>
+    </div>
+
+    <!--Navbar-->
+    <header class="container-fluid" style="background-color: var(--navbar-color); height: 10vh;">
+        <nav class="navbar navbar-expand-lg" style="z-index: 1;">
+            <div class="container-fluid">
+
+            <!--Brand-->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <span class="bi bi-globe fs-3"></span><strong>ITWD6.408</strong>
+            </a>
+
+            <!--Mobile Search + Hamburger-->
+            <div class="d-flex align-items-center d-lg-none">
+                <button class="btn" data-bs-toggle="collapse" data-bs-target="#collapseExample" 
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <span class="bi bi-search fs-3"></span>
+                </button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!--Nav Links-->
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav">
+                <ul class="navbar-nav float-end fs-5 mt-2" style="background-color: var(--navbar-color);">
+                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="form.html">FORMS</a></li>
+                    <li class="nav-item"><a class="nav-link active bg-warning p-2 link-dark link-opacity-75-hover" aria-current="page" href="webapi.html">WEBAPI</a></li>
+                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="javascript.html">JAVASCRIPT</a></li>
+                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="research.html">RESEARCH</a></li>
+                </ul>
+            </div>
+
+            <!--Search Icon LG device-->
+            <button class="btn d-none d-lg-inline align-end" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+            </div>
+        </nav>
+    </header>
+
+
+<!--Main Area Here-->
+<main>
+        <div class="accordion row align-items-start p-2" id="accordionExample">
+        <!--Group Two Buttons-->
+            <div class="row col-12 col-lg-3">
+                <!--JSON RULES Button-->
+                <h2 class="accordion-header col-6 col-lg-12">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        JSON RULES
+                    </button>
+                </h2>
+                <!-- REST API Button-->
+                <h2 class="accordion-header col-6 col-lg-12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        REST API
+                </button>
+                </h2>
+            </div>
+
+    
+        <!--Group Content-->
+        <div class="col-12 col-lg-9"> 
+                <div class="accordion-item" style="background-color: var(--json-color);">
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="min-height: 50vh;">
+                            <!--JSON RULES -->
+                            <div class="row">
+                                <h3 class="fw-bold">JSON Rules</h3>
+                                <p>Important Rules that must be adhered to in order to create a valid JSON data:</p>
+                                
+                            
+                            <!--1: Data Type-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Data Types</h5>
+                                        <p class="card-text">JSON supports six data types: strings, numbers, objects, arrays, booleans, and null. Every value in a JSON document must be one of these types.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-1"><code>{
+  "name": "Michael",       // string
+  "age": 37,                // number
+  "isStudent": true,        // boolean
+  "address": { "town": "Hastings" }, // object
+  "hobbies": ["Photography", "Gaming"],   // array
+  "notes": null             // null
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--2: Object Structure-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Object Structure</h5>
+                                        <p class="card-text">Objects are wrapped in curly braces <code>{ }</code> and contain key-value pairs separated by commas. Keys and values are separated by a colon.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
+  "fname": "Michael",
+  "lname": "Watson",
+  "town": "Hastings"
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--3: Array Structure-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Array Structure</h5>
+                                        <p class="card-text">Arrays are wrapped in square brackets <code>[ ]</code> and hold an ordered list of values, separated by commas. Values can be of any valid JSON type.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
+  "phoneType": ["iOS", "Android"],
+  "marks": [85, 92, 78]
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--4: Key Rules-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Key Rules</h5>
+                                        <p class="card-text">Keys must always be strings wrapped in double quotes. Single quotes and unquoted keys are not valid JSON syntax.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-0"><code>// Valid
+{ "fname": "Michael" }
+
+// Invalid
+{ fname: "Michael" }
+{ 'fname': "Michael" }</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--5: Strings-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Strings</h5>
+                                        <p class="card-text">String values must be wrapped in double quotes, not single quotes. Special characters need to be escaped using a backslash.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
+  "quote": "She said \"hello\"",
+  "path": "C:\\Users\\Michael"
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--6: Trailing Commas-->
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">No Trailing Commas</h5>
+                                        <p class="card-text">JSON does not allow a trailing comma after the last item in an object or array. Doing so will cause a parsing error.</p>
+<pre class="bg-dark text-light p-3 rounded small mb-0"><code>// Valid
+{ "a": 1, "b": 2 }
+
+// Invalid
+{ "a": 1, "b": 2, }</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="accordion-item col-12 col-lg-12">
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    
+                    <div class="accordion-body" style="min-height: 50vh; background-color: var(--json-color);">
+                        <h3 class="fw-bold">WEB API: Supabase API</h3>
+                        <p>Mobile Technology Form: Using the Supabase Client API</p>
+                        
+                        <!--Search box-->
+                            <div class="container">
+                                <input type="text" id="searchInput">
+                                <input type="button" value="Search" onclick="displayFilteredCards()">	
+                            </div>
+                            <br>
+
+                        <div id="mobiletechnologyform-data" class="row"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+</main>
+    
+<footer class="container-fluid" style="background-color: var(--navbar-color); ">
+        
+        <!--Social Media Links-->
+        <div class="row position-relative">
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center d-lg-block gap-3 p-2">
+                <h3>
+                    <span class="bi bi-linkedin text-info"></span>
+                    <span class="bi bi-youtube text-danger"></span>
+                    <span class="bi bi-twitter text-info"></span>
+                    <span class="bi bi-facebook text-primary"></span>
+                    <span class="bi bi-instagram instagram-gradient"></span>
+                <style>
+                .instagram-gradient {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                            -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;
+                }
+                </style>
+                </h3>
+            </div>
+
+            <!--Copyright Information-->
+            <div class="col-8  col-md-4 d-flex justify-content-center align-items-center">
+                <p class="fs-6"><strong> &copy; 2026 - Michael Watson.</strong></p>
+            </div>
+
+            <!--Privacy Policy Button and Modal-->
+            <div class="col-4  col-md-4 d-flex justify-content-end align-items-center">
+                <p class="fs-6">  
+                <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#privacyModal">
+                    Privacy Policy
+                </button>
+                </p>
+            </div>
+
+            <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="privacyModalLabel"><strong>PRIVACY POLICY</strong></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+            
+            <div class="modal-body">
+                <p>
+                    <strong>PERSONAL INFORMATION<br></strong>
+
+                    Personal information has the same meaning as defined in the Privacy Act 1993. <br>
+                    This can include any information that can be used to personally identify you.<br><br>
+
+                    <strong>TYPES OF PERSONAL INFORMATION COLLECTED<br></strong>
+
+                        Types of personal information collected can include, but is not limited to:
+                        <div class="fs-6 ms-5">
+                        <li>Name</li>
+                        <li>Address</li>
+                        <li>Location</li>
+                        <li>Email address</li>
+                        <li>Telephone number</li>
+                        <li>Age or date of birth</li>
+                        <li>Profession</li><br>
+                        </div>
+                    <strong>HOW INFORMATION IS COLLECTED</strong><br>
+
+                        By filling out and submitting any forms on this webpage, you agree that we may collect the information provided by you.<br><br>
+
+                    <strong>USE OF PERSONAL INFORMATION</strong><br>
+
+                        The personal information collected from you will be used for research and study purposes, to better understand trends in society.<br><br>
+
+                    <strong>COOKIES</strong><br>
+
+                        Our website uses cookies to enhance your browsing experience. You can disable cookies through your browser settings, but this may affect the functionality of our site.<br><br>
+
+                    <strong>USE OF PERSONAL INFORMATION FOR COMMUNICATION</strong><br>
+
+                        By providing your email address, you agree to receive follow up emails, promotional or informational, from. You can opt out at any time through the unsubscribe link in the emails.<br><br>
+
+                    <strong>DISCLOSURE OF PERSONAL INFORMATION</strong><br>
+
+                        We do not sell, trade, or otherwise transfer your personal information to outside parties, except when required by law or to provide services you requested.<br><br>
+
+                    <strong>PROTECTION OF PERSONAL INFORMATION</strong><br>
+
+                        We take responsibility of your personal information seriously, and will ensure that the personal information we hold is protected from misuse, loss or unauthorised access.<br><br>
+
+                    <strong>YOUR RIGHTS TO ACCESS YOUR PERSONAL INFORMATION</strong><br>
+
+                        You have the right to access, correct, or delete your personal information. You can request this by contacting us through the details provided on our website.<br><br>
+
+                    <strong>CHANGES TO THIS POLICY</strong><br>
+
+                        We reserve the right to update or modify this Privacy Policy at any time. Changes will be posted on this page with an updated effective date.<br><br>
+
+                    <strong>CONTACT INFORMATION</strong><br>
+
+                        If you have any questions or concerns regarding this Privacy Policy, please contact us at myklwatson@gmail.com<br><br>
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">ACCEPT</button>
+            </div>
+
+        </div>
+</footer>
+
+    <!-- Insert/Embed Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
+
+    <script type="module" src="webapi.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
