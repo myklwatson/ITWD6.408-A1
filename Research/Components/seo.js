@@ -1,13 +1,12 @@
-//IMPORT
+//SEO COMPONENT
 
-//COMPONENT CODES
+//EXPORT
 export const seo = {
-  //------------------------------------
-  //Data properties
 
   //------------------------------------
-  //Component User Interface (UI)
+  //Component UI
   renderUI() {
+
     //Build HTML view
     let ui = `
       <div class="flip-card position-relative" id="seo-card">
@@ -30,7 +29,7 @@ export const seo = {
             
             <ol class="fs-6">
               <li><strong>Descriptive titles & meta descriptions</strong> - Each page should have a title and description that clearly explain what the page is about.</li>
-              <li><strong>Proper heading structure</strong> - Use h1, h2, and h3 headings in a logical order to organise the content.</li>
+              <li><strong>Proper heading structure</strong> - Use <strong>h1, h2,</strong> and <strong>h3</strong> headings in a logical order to organise the content.</li>
               <li><strong>Image alt text</strong> - Descriptions for images help with accessibility and also give search engines more information about the images.</li>
               <li><strong>Mobile-friendly, fast pages</strong> - The site should work well on mobile devices and load quickly. Mobile performance is one of the factors Google considers when ranking pages.</li>
               <li><strong>Quality backlinks</strong> - Links from reputable websites can help build the site's authority.</li>
@@ -64,11 +63,10 @@ export const seo = {
     return ui;
   },
 
-  //Functions
-  //------------------------------------
   addEvent() {
-    // Flip cards on click
+    // Flip Card On Click
     document.getElementById('seo-card').addEventListener('click', function() {
+       // Toggle('flipped')
       this.classList.toggle("flipped");
     });
   }

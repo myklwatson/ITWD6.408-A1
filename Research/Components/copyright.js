@@ -71,8 +71,6 @@ export const copyright = {
     return ui;
   },
 
-  //------------------------------------
-  //Function
   addEvent() {
     // Flip Card On Click
     document.getElementById('copyright-card').addEventListener('click', function() {

@@ -1,14 +1,13 @@
-//IMPORT
+//WEB HOSTING COMPONENT
 
-//COMPONENT CODES
+//EXPORT
 export const hosting = {
-  //------------------------------------
-  //Data properties
 
   //------------------------------------
-  //Component User Interface (UI)
+  //Component UI
   renderUI() {
-    //Build HTML view
+
+    //Build HTML View
     let ui = `
       <div class="flip-card position-relative" id="hosting-card">
         <div class="flip-card-inner position-relative w-100 h-100">
@@ -29,19 +28,26 @@ export const hosting = {
           </p>
 
           <ol class="fs-6">
-            <li><strong>Uptime guarantee</strong> — look for at least 99.9% uptime.</li>
-            <li><strong>Server location & speed</strong> — closer servers reduce load times.</li>
-            <li><strong>Scalability</strong> — ability to upgrade as traffic grows.</li>
-            <li><strong>Security features</strong> — SSL, backups, firewalls.</li>
-            <li><strong>Support & cost</strong> — responsive support at a fair price.</li>
+            <li><strong>Uptime guarantee</strong> - The site should be available most of the time. Around 99.9% uptime is a good target.</li>
+            <li><strong>Server location & speed</strong> - A server that is closer to the users can help the site load faster.</li>
+            <li><strong>Scalability</strong> - There should be options to upgrade if the site starts getting more traffic.</li>
+            <li><strong>Security features</strong> - Useful features include SSL, backups, and protection against common attacks.</li>
+            <li><strong>Support & cost</strong> - The service should provide reliable support without being unnecessarily expensive.</li>
           </ol>
-          <a href="https://www.cloudflare.com/learning/performance/what-is-web-hosting/" target="_blank" rel="noopener">Cloudflare →</a>
+          <br>
+
+          <p class="fs-6 lh-base">
+          For more information, visit 
+          <a class="fw-bold" href="https://cloud.google.com/discover/what-is-web-hosting" target="_blank" rel="noopener">Understanding Web Hosting →</a>
           <br><br>
 
-          <h6 class="fw-bold">Hosting Choice for This Project</h6>
+          <h6 class="fw-bold">Hosting Choice</h6>
           <p class="fs-6 lh-base">
-            I chose <strong>GitHub Pages</strong> to publish this project. It's free, integrates directly with the Git version control already used to develop the site, supports custom domains if needed later, and is well-suited to a static multi-page HTML/CSS/JS site like this one with no server-side rendering requirements. Its main limitation is that it can't run a backend directly — which is why this project uses Supabase as an external backend-as-a-service for authentication and data storage instead.
+            For this project we will publish to <strong>GitHub Pages</strong>. GitHub Pages is a good fit for this project because it is a static website built with HTML, CSS, and JavaScript. It does not need its own server to generate pages. One limitation is that GitHub Pages cannot run a backend, so I am using Supabase separately for things like authentication and storing user data. 
           </p>
+          <p class="fs-6 lh-base">
+            We are also using <strong>Vercel</strong> to host the Supabase backend. Vercel is a cloud platform that can host serverless functions and APIs, which is useful for our project because it allows us to run backend code without managing a traditional server.
+          </p>  
 
         </div>
 
@@ -49,18 +55,16 @@ export const hosting = {
       </div>
     `;
 
-    //Return HTML view
+    //Return HTML View
     return ui;
   },
 
   addEvent() {
-    // Flip cards on click
+    // Flip Card On Click
     document.getElementById('hosting-card').addEventListener('click', function() {
+      // Toggle('flipped')
       this.classList.toggle("flipped");
     });
   },
-
- //------------------------------------
- //Functions
 
 }

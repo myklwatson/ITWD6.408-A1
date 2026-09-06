@@ -26,19 +26,19 @@ export const privacy = {
             In New Zealand, the <strong>Privacy Act 2020</strong> includes 13 Information Privacy Principles that organisations need to follow.
           </p>
           <ol class="fs-6">
-            <li>Purpose - Only collect information for a lawful and necessary purpose.</li>
-            <li>Source - Where possible, collect the information directly from the person.</li>
-            <li>Collection - Tell people what information is being collected and why.</li>
-            <li>Manner - Collect information fairly, legally, and without being unnecessarily intrusive.</li>
-            <li>Storage - Keep personal information secure and protect it from being lost or misused.</li>
-            <li>Access - People have the right to ask for access to their personal information.</li>
-            <li>Correction - People can ask for their information to be corrected if it is wrong.</li>
-            <li>Accuracy - Make sure information is accurate before using it.</li>
-            <li>Retention - Do not keep personal information longer than it is needed.</li>
-            <li>Use - Generally, only use information for the reason it was originally collected.</li>
-            <li>Disclosure - Do not share personal information with other organisations unless there is a valid reason to do so.</li>
-            <li>Unique Identifiers - Be careful about using things like ID numbers to identify people.</li>
-            <li>Cross-Border Disclosure - Take appropriate steps to protect information when it is sent overseas.</li>
+            <li><strong>Purpose</strong> - Only collect information for a lawful and necessary purpose.</li>
+            <li><strong>Source</strong> - Where possible, collect the information directly from the person.</li>
+            <li><strong>Collection</strong> - Tell people what information is being collected and why.</li>
+            <li><strong>Manner</strong> - Collect information fairly, legally, and without being unnecessarily intrusive.</li>
+            <li><strong>Storage</strong> - Keep personal information secure and protect it from being lost or misused.</li>
+            <li><strong>Access</strong> - People have the right to ask for access to their personal information.</li>
+            <li><strong>Correction</strong> - People can ask for their information to be corrected if it is wrong.</li>
+            <li><strong>Accuracy</strong> - Make sure information is accurate before using it.</li>
+            <li><strong>Retention</strong> - Do not keep personal information longer than it is needed.</li>
+            <li><strong>Use</strong> - Generally, only use information for the reason it was originally collected.</li>
+            <li><strong>Disclosure</strong> - Do not share personal information with other organisations unless there is a valid reason to do so.</li>
+            <li><strong>Unique Identifiers</strong> - Be careful about using things like ID numbers to identify people.</li>
+            <li><strong>Cross-Border Disclosure</strong> - Take appropriate steps to protect information when it is sent overseas.</li>
           </ol>
 
           <p class="fs-6 lh-base">
@@ -71,8 +71,6 @@ export const privacy = {
     return ui;
   },
 
-  //------------------------------------
-  //Function
   addEvent() {
     // Flip Card On Click
     document.getElementById('privacy-card').addEventListener('click', function() {
