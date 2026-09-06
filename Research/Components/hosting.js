@@ -46,7 +46,7 @@ export const hosting = {
             For this project we will publish to <strong>GitHub Pages</strong>. GitHub Pages is a good fit for this project because it is a static website built with HTML, CSS, and JavaScript. It does not need its own server to generate pages. One limitation is that GitHub Pages cannot run a backend, so I am using Supabase separately for things like authentication and storing user data. 
           </p>
           <p class="fs-6 lh-base">
-            We are also using <strong>Vercel</strong> to host the Supabase backend. Vercel is a cloud platform that can host serverless functions and APIs, which is useful for our project because it allows us to run backend code without managing a traditional server.
+            We are also using <strong>Vercel</strong> to publish this project. It connects directly to my GitHub repository and automatically redeploys the live site whenever I push a new commit, which made it easy to test changes quickly during development. It provides HTTPS by default, fast global CDN delivery out of the box, and requires no manual server configuration — well suited to a static multi-page HTML/CSS/JS project like this one. Since the site has no server-side rendering requirements (all backend functionality is handled externally through Supabase), Vercel's static hosting is a good fit without needing a more complex hosting setup.
           </p>  
 
         </div>
