@@ -290,82 +290,61 @@ font-weight: 500;
 }
 
 
+
 /* --- Research Page --- */
 
-
-.research-flip-box {
+.flip-card {
     perspective: 1000px;
     height: 300px;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+
 }
 
 @media (min-width: 992px) {
-    .research-flip-box {
-        height: 280px;
+    .flip-card {
+        height: 400px;
     }
 }
 
-.research-flip-box-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 0.7s;
     transform-style: preserve-3d;
 }
 
-.research-flip-box:hover .research-flip-box-inner {
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.research-flip-box-front,
-.research-flip-box-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 5px solid orange;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 115, 0, 0.701);
 }
 
-.research-flip-box-front {
-    background-color: #fff4cd;
+.flip-card-front {
+    background-color: #ffeed7;
     overflow: hidden;
 }
 
-.research-flip-box-front img {
-    width: 100%;
-    height: 65%;
+.flip-card-front img {
+    background-color: #ffeed7;
+    height: 60%;
+    width: auto;
+    max-width: 80%;
     object-fit: contain;
-    background-color: #fff4cd;
 }
 
-.research-flip-box-front h5 {
-    padding: 10px;
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-}
-
-.research-flip-box-back {
+.flip-card-back {
     background-color: #f8f9fa;
     transform: rotateY(180deg);
-    padding: 14px;
-    overflow-y: auto;
-   
-    
+    overflow-y: auto;    
 }
 
-.research-flip-box-back h5 {
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-.research-flip-box-back ol {
-    padding-left: 1rem;
-    margin-bottom: 6px;
-}
-
-.research-flip-box-back li {
-    margin-bottom: 2px;
-}

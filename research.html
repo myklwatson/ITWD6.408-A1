@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBAPI</title>
+    <title>RESEARCH</title>
 
     <!--Insert/Embed Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,7 +21,6 @@
             --webtech-color: #EC7063;
             --competence-color: #9CDA0D;
             --statement-color: #F27A09;
-            --json-color: #F8F8F8;
         }
     </style>
 </head>
@@ -29,7 +28,7 @@
 <!--Visible Webpage-->
 <body>
 
-   <!--Search Functionality Field-->
+    <!--Search Functionality Field-->
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
             <form class="d-flex" role="search" onsubmit="return false;">
@@ -39,6 +38,8 @@
             <div id="siteSearchResults" class="mt-2"></div>
         </div>
     </div>
+
+    
 
     <!--Navbar-->
     <header class="container-fluid" style="background-color: var(--navbar-color); height: 10vh;">
@@ -69,9 +70,9 @@
                 <ul class="navbar-nav float-end fs-5 mt-2" style="background-color: var(--navbar-color);">
                     <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="index.html">HOME</a></li>
                     <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="form.html">FORMS</a></li>
-                    <li class="nav-item"><a class="nav-link active bg-warning p-2 link-dark link-opacity-75-hover" aria-current="page" href="webapi.html">WEBAPI</a></li>
+                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover"  href="webapi.html">WEBAPI</a></li>
                     <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="javascript.html">JAVASCRIPT</a></li>
-                    <li class="nav-item"><a class="nav-link p-2 link-dark link-opacity-75-hover" href="research.html">RESEARCH</a></li>
+                    <li class="nav-item"><a class="nav-link active bg-warning p-2 link-dark link-opacity-75-hover" aria-current="page" href="research.html">RESEARCH</a></li>
                 </ul>
             </div>
 
@@ -87,152 +88,21 @@
 
 <!--Main Area Here-->
 <main>
-        <div class="accordion row align-items-start p-2" id="accordionExample">
-        <!--Group Two Buttons-->
-            <div class="row col-12 col-lg-3">
-                <!--JSON RULES Button-->
-                <h2 class="accordion-header col-6 col-lg-12">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        JSON RULES
-                    </button>
-                </h2>
-                <!-- REST API Button-->
-                <h2 class="accordion-header col-6 col-lg-12">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        REST API
-                </button>
-                </h2>
-            </div>
 
-    
-        <!--Group Content-->
-        <div class="col-12 col-lg-9"> 
-                <div class="accordion-item" style="background-color: var(--json-color);">
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="min-height: 50vh;">
-                            <!--JSON RULES -->
-                            <div class="row">
-                                <h3 class="fw-bold">JSON Rules</h3>
-                                <p>Important Rules that must be adhered to in order to create a valid JSON data:</p>
-                                
-                            
-                            <!--1: Data Type-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">Data Types</h5>
-                                        <p class="card-text">JSON supports six data types: strings, numbers, objects, arrays, booleans, and null. Every value in a JSON document must be one of these types.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-1"><code>{
-  "name": "Michael",       // string
-  "age": 37,                // number
-  "isStudent": true,        // boolean
-  "address": { "town": "Hastings" }, // object
-  "hobbies": ["Photography", "Gaming"],   // array
-  "notes": null             // null
-}</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!--2: Object Structure-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">Object Structure</h5>
-                                        <p class="card-text">Objects are wrapped in curly braces <code>{ }</code> and contain key-value pairs separated by commas. Keys and values are separated by a colon.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
-  "fname": "Michael",
-  "lname": "Watson",
-  "town": "Hastings"
-}</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--3: Array Structure-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">Array Structure</h5>
-                                        <p class="card-text">Arrays are wrapped in square brackets <code>[ ]</code> and hold an ordered list of values, separated by commas. Values can be of any valid JSON type.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
-  "phoneType": ["iOS", "Android"],
-  "marks": [85, 92, 78]
-}</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--4: Key Rules-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">Key Rules</h5>
-                                        <p class="card-text">Keys must always be strings wrapped in double quotes. Single quotes and unquoted keys are not valid JSON syntax.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-0"><code>// Valid
-{ "fname": "Michael" }
-
-// Invalid
-{ fname: "Michael" }
-{ 'fname': "Michael" }</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--5: Strings-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">Strings</h5>
-                                        <p class="card-text">String values must be wrapped in double quotes, not single quotes. Special characters need to be escaped using a backslash.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-0"><code>{
-  "quote": "She said \"hello\"",
-  "path": "C:\\Users\\Michael"
-}</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--6: Trailing Commas-->
-                            <div class="col-12 col-lg-6 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">No Trailing Commas</h5>
-                                        <p class="card-text">JSON does not allow a trailing comma after the last item in an object or array. Doing so will cause a parsing error.</p>
-<pre class="bg-dark text-light p-3 rounded small mb-0"><code>// Valid
-{ "a": 1, "b": 2 }
-
-// Invalid
-{ "a": 1, "b": 2, }</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="container-fluid" style="min-height: 80vh;">
+        <br>
+            <h3 class="text-center fw-bold">Web Development Research</h3>
+                <div class="row justify-content-center g-5 p-4">
+                    <div class="col-12 col-md-6 col-lg-4" id="copyright-component"></div>
+                    <div class="col-12 col-md-6 col-lg-4" id="privacy-component"></div>
+                    <div class="col-12 col-md-6 col-lg-4" id="seo-component"></div>
+                    <div class="col-12 col-md-6 col-lg-4" id="hosting-component"></div>
+                    <div class="col-12 col-md-6 col-lg-4" id="maintenance-component"></div>
+                    <div class="col-12 col-md-6 col-lg-4" id="security-component"></div>
                 </div>
-            <div class="accordion-item col-12 col-lg-12">
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    
-                    <div class="accordion-body" style="min-height: 50vh; background-color: var(--json-color);">
-                        <h3 class="fw-bold">WEB API: Supabase API</h3>
-                        <p>Mobile Technology Form: Using the Supabase Client API</p>
-                        
-                        <!--Search box-->
-                            <div class="container">
-                                <input type="text" id="searchInput">
-                                <input type="button" value="Search" onclick="displayFilteredCards()">	
-                            </div>
-                            <br>
+        <br>
+    </section>
 
-                        <div id="mobiletechnologyform-data" class="row"></div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-     
 </main>
     
 <footer class="container-fluid" style="background-color: var(--navbar-color); ">
@@ -346,28 +216,12 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
             crossorigin="anonymous"></script>
 
-    <script type="module" src="JS/webapi.js"></script>
+    <!-- Insert/Embed Search JS -->        
     <script src="JS/search.js"></script>
 
-    <!-- Script to handle opening the correct accordion panel based on the URL hash -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hash = window.location.hash; // e.g. "#collapseThree"
+    <!-- Insert/Embed Research JS -->
+    <script src="Research/research-app.js" type="module"></script>
 
-        if (hash) {
-            const targetPanel = document.querySelector(hash);
-
-            if (targetPanel && targetPanel.classList.contains("accordion-collapse")) {
-                // Use Bootstrap's Collapse API to actually open the panel
-                const bsCollapse = new bootstrap.Collapse(targetPanel, { show: true });
-
-                // Scroll to it smoothly after a brief delay, so the accordion has started opening
-                setTimeout(() => {
-                    targetPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 300);
-            }
-        }
-    });
-    </script>
+    
 </body>
 </html>

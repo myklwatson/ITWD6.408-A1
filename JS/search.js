@@ -9,16 +9,16 @@ const siteIndex = [
     { title: "Home - Web Development Competence", keywords: "html5 css3 javascript competence skills rating", url: "index.html#competence" },
     { title: "Home - Statement of Authenticity", keywords: "authenticity original work academic integrity", url: "index.html#statement" },
 
-    { title: "Form Page - HTML Form", keywords: "form contact name address gender phone mobile provider", url: "form.html" },
-    { title: "Form Page - Google Form", keywords: "google form spreadsheet submission", url: "form.html" },
+    { title: "Form Page - HTML Form", keywords: "form contact name address gender phone mobile provider", url: "form.html#collapseOne" },
+    { title: "Form Page - Google Form", keywords: "google form spreadsheet submission", url: "form.html#collapseTwo" },
 
-    { title: "Web API - JSON Rules", keywords: "json rules syntax data format", url: "webapi.html" },
-    { title: "Web API - REST API", keywords: "rest api supabase http get post put delete", url: "webapi.html" },
+    { title: "Web API - JSON Rules", keywords: "json rules syntax data format", url: "webapi.html#accordionOne" },
+    { title: "Web API - REST API", keywords: "rest api supabase http get post put delete", url: "webapi.html#accordionTwo" },
 
-    { title: "JavaScript - Slideshows", keywords: "slideshow movies automatic manual customisation dark mode", url: "javascript.html" },
-    { title: "JavaScript - Product Catalog", keywords: "products cart shopping search filter sort add to cart", url: "javascript.html" },
-    { title: "JavaScript - Quiz", keywords: "quiz web dev knowledge questions score", url: "javascript.html" },
-    { title: "JavaScript - Authentication", keywords: "login signup account authentication supabase password", url: "javascript.html" },
+    { title: "JavaScript - Slideshows", keywords: "slideshow movies automatic manual customisation dark mode", url: "javascript.html#collapseOne" },
+    { title: "JavaScript - Product Catalog", keywords: "products cart shopping search filter sort add to cart", url: "javascript.html#collapseTwo" },
+    { title: "JavaScript - Quiz", keywords: "quiz web dev knowledge questions score", url: "javascript.html#collapseThree" },   
+    { title: "JavaScript - Authentication", keywords: "login signup account authentication supabase password", url: "javascript.html#collapseFour" },
 
     { title: "Research - Copyright & CC Licenses", keywords: "copyright creative commons fair use licenses", url: "research.html" },
     { title: "Research - Privacy Policy", keywords: "privacy policy personal information act principles", url: "research.html" },
