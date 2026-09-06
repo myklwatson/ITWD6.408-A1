@@ -56,10 +56,10 @@ export const copyright = {
 
             <h6 class="fw-bold">Copyright Analysis</h6>
             <p class="fs-6 lh-base">
-              This website uses a mixture of images provided for the course and stock or placeholder images for product demonstrations and research. Some of the product photos in the JavaScript demo (Demo 2) are being used for educational purposes as part of my coursework, rather than for a commercial website. However, this does not mean the images are free from copyright. They may still belong to the original manufacturers, photographers, or other copyright owners.
+              This website uses a mixture of images provided for the course and stock or placeholder images for product demonstrations and research. Some of the product photos in the JavaScript demo (Demo 2) are being used for educational purposes as part of this student project, rather than for a commercial website. However, this does not mean the images are free from copyright. They may still belong to the original manufacturers, photographers, or other copyright owners.
             </p>
             <p class="fs-6 lh-base">
-              I would license this website under <strong>CC BY-NC</strong> (Attribution-NonCommercial). This would allow other people to look at, learn from, and adapt my code and layout for their own coursework, as long as they give me credit. It would also prevent them from using my work commercially. This seems appropriate for a student project that is intended for learning and demonstration rather than commercial use.
+              I would license this website under <strong>CC BY-NC</strong> (Attribution-NonCommercial). This would allow other people to look at, learn from, and adapt my code and layout for their own projects, as long as they give me credit. It would also prevent them from using my work commercially. This seems appropriate for a student project that is intended for learning and demonstration rather than commercial use.
             </p>          
           </div>
 

@@ -16,7 +16,7 @@ const quizQuestions = [
     },
     {
         question: "What does SEO stand for?",
-        options: ["Search Engine Optimization", "Site Element Order", "Secure Encrypted Output", "Search Efficiency Online"],
+        options: ["Search Engine Optimisation", "Site Element Order", "Secure Encrypted Output", "Search Efficiency Online"],
         correctIndex: 0
     },
     {

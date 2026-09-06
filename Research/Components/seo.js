@@ -17,11 +17,11 @@ export const seo = {
                       align-items-center text-center p-3 rounded">
             
             <img src="Images/SEO image.jpg" alt="SEO" class="mb-2">
-            <h4 class="fw-bold">Search Engine Optimization</h4>
+            <h4 class="fw-bold">Search Engine Optimisation</h4>
           </div>
 
           <div class="flip-card-back position-absolute w-100 h-100 p-3 rounded overflow-y-auto text-start">
-            <h5 class="fw-bold mb-2">Search Engine Optimization (SEO)</h5>
+            <h5 class="fw-bold mb-2">Search Engine Optimisation (SEO)</h5>
 
             <p class="fs-6 lh-base">
               SEO is about making a website easier to find through search engines such as Google. Some of the main things that can help are:
@@ -43,7 +43,7 @@ export const seo = {
             
             <h6 class="fw-bold">SEO Plan</h6>
             <p class="fs-6 lh-base">
-              For this site, I plan to start with the basics. I will add descriptive title and meta description tags to each page so they match the actual content. I will also check the images, including the research and product images, and add useful alt text instead of relying on filenames.
+              For this site, I have added some descriptive title and meta description tags to each page so they match the actual content. I will make sure the images, including the research and product images, have a useful alt text included instead of relying on filenames.
             </p>
 
             <p class="fs-6 lh-base">

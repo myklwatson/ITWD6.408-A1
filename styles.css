@@ -1,3 +1,10 @@
+/* --- Showcase Section --- */
+#showcase {
+    height: 45vh;
+    position: relative;
+    overflow: hidden;
+}
+
 /* -- Flip Boxes -- */
 
 .flip-box {

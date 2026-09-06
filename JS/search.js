@@ -22,7 +22,7 @@ const siteIndex = [
 
     { title: "Research - Copyright & CC Licenses", keywords: "copyright creative commons fair use licenses", url: "research.html" },
     { title: "Research - Privacy Policy", keywords: "privacy policy personal information act principles", url: "research.html" },
-    { title: "Research - SEO", keywords: "seo search engine optimization visibility", url: "research.html" },
+    { title: "Research - SEO", keywords: "seo search engine optimisation visibility", url: "research.html" },
     { title: "Research - Web Hosting", keywords: "web hosting provider server uptime", url: "research.html" },
     { title: "Research - Performance & Maintenance", keywords: "performance maintenance page speed loading time", url: "research.html" },
     { title: "Research - Web Security", keywords: "security cyber attacks phishing sql injection xss", url: "research.html" }
